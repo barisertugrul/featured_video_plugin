@@ -1,0 +1,40 @@
+.featured-video-preview {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.featured-video-preview iframe,
+.featured-video-preview video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.youtube-preview,
+.mp4-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.featured-video-preview video {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.featured-video-preview:hover video {
+    opacity: 1;
+}
+
+/* Mobil için özel stiller */
+@media (max-width: 768px) {
+    .featured-video-preview video {
+        opacity: 1;
+    }
+}
